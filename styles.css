@@ -23,6 +23,13 @@ html {
   scroll-behavior: smooth;
 }
 
+#services,
+#about,
+#proof,
+#contact {
+  scroll-margin-top: 90px;
+}
+
 body {
   margin: 0;
   font-family: "Manrope", sans-serif;
@@ -49,11 +56,19 @@ body {
 }
 
 .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0.75rem 0 3.5rem;
+  padding: 0.75rem 1rem;
+  margin: 0 -1rem 3rem;
+  background: rgba(250, 248, 243, 0.78);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
 }
 
 .brand {
@@ -112,9 +127,7 @@ body {
 .hero-card,
 .service-card,
 .process-step,
-.highlight-panel,
 .contact-card,
-.intro,
 .toolkit {
   backdrop-filter: none;
   background: var(--surface);
@@ -141,9 +154,9 @@ body {
 }
 
 .hero-copy h1 {
-  font-size: clamp(4rem, 9vw, 7rem);
+  font-size: clamp(3rem, 7vw, 5.5rem);
   margin-top: 1rem;
-  max-width: 11ch;
+  max-width: 14ch;
   letter-spacing: -0.03em;
 }
 
@@ -245,7 +258,6 @@ body {
   padding: 2.4rem;
 }
 
-.intro,
 .toolkit,
 .process,
 .services,
@@ -301,8 +313,7 @@ body {
 
 .service-card h3,
 .process-step h3,
-.proof-card h3,
-.gallery-copy h3 {
+.proof-card h3 {
   margin: 0 0 0.7rem;
   font-size: 1.25rem;
 }
@@ -500,7 +511,6 @@ body {
   font-size: 1.08rem;
 }
 
-.intro .section-heading,
 .toolkit .section-heading,
 .process .section-heading,
 .services .section-heading,
@@ -508,7 +518,6 @@ body {
   max-width: 760px;
 }
 
-.intro .section-heading,
 .services .section-heading,
 .toolkit .section-heading,
 .process .section-heading {
@@ -588,6 +597,63 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.service-card,
+.process-step,
+.proof-card,
+.result-card,
+.thumb-card,
+.created-card,
+.video-card {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.service-card:hover,
+.process-step:hover,
+.proof-card:hover,
+.result-card:hover,
+.thumb-card:hover,
+.created-card:hover,
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 46px rgba(23, 49, 77, 0.12);
+}
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+.site-footer a {
+  color: var(--accent-deep);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .service-card:hover,
+  .process-step:hover,
+  .proof-card:hover,
+  .result-card:hover,
+  .thumb-card:hover,
+  .created-card:hover,
+  .video-card:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 900px) {

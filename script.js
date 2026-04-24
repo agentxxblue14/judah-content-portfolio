@@ -18,3 +18,6 @@ reveals.forEach((item, index) => {
   item.style.transitionDelay = `${index * 60}ms`;
   observer.observe(item);
 });
+
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
