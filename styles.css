@@ -174,7 +174,8 @@ body {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  align-items: center;
+  gap: 1.2rem;
   margin: 2.3rem 0 1.4rem;
 }
 
@@ -202,6 +203,55 @@ body {
   background: rgba(255, 255, 255, 0.75);
   color: var(--ink);
   border-color: var(--line);
+}
+
+.text-link {
+  align-self: center;
+  color: var(--accent-deep);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 180ms ease;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  border-bottom-color: var(--accent-deep);
+}
+
+.stat-bar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.8rem 0 0;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.stat-bar div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.stat-bar dt {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-bar dd {
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
 }
 
 .proof-strip {
@@ -485,6 +535,15 @@ body {
   padding: 1.35rem 1.45rem 1.65rem;
 }
 
+.result-stat {
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
 .result-copy h3 {
   margin: 0 0 0.7rem;
   color: var(--ink);
@@ -495,6 +554,115 @@ body {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.about-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(249, 245, 237, 0.9));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+  gap: 2.2rem;
+  align-items: start;
+}
+
+.about-copy .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.about-copy h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.about-copy p {
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 0 0 1rem;
+}
+
+.about-facts {
+  padding: 1.6rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+}
+
+.about-facts dl {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.about-facts div + div {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.about-facts dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-deep);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.about-facts dd {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.thumb-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb-card figcaption {
+  padding: 0.75rem 1rem 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.contact-lead {
+  margin: 0 0 1.2rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+.contact-meta {
+  margin: 0 0 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1.4rem;
+}
+
+.contact-meta dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-deep);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.contact-meta dd {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.contact-meta a {
+  color: var(--accent-deep);
 }
 
 .proof-subsection {
@@ -548,12 +716,8 @@ body {
   margin-top: 3rem;
 }
 
-.thumb-card {
-  aspect-ratio: 16 / 9;
-}
-
 .thumb-card img {
-  height: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
 }
@@ -664,12 +828,27 @@ body {
   .results-grid,
   .created-grid,
   .video-grid,
-  .thumbnail-grid {
+  .thumbnail-grid,
+  .about-grid,
+  .contact-meta {
     grid-template-columns: 1fr;
   }
 
   .hero-copy {
     padding: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .stat-bar {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.1rem 1.2rem;
+  }
+
+  .stat-bar div + div {
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--line);
   }
 }
 
