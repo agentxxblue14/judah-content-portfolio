@@ -1,634 +1,771 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Judah | Content Operations Portfolio</title>
-    <meta
-      name="description"
-      content="A niche portfolio for a Content Operations specialist supporting YouTube creators, coaches, and personal brands with planning, publishing, metadata, and content systems."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Judah | Content Operations Portfolio" />
-    <meta
-      property="og:description"
-      content="Content Operations support for YouTube creators, coaches, and personal brands — calendars, publishing, metadata, thumbnails, SOPs, and systems."
-    />
-    <meta property="og:image" content="assets/youtube-results-01.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317314d'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%23b79545'%3EJ%3C/text%3E%3C/svg%3E"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="hero">
-        <nav class="topbar">
-          <div class="brand">
-            <span class="brand-mark">J</span>
-            <div>
-              <p class="eyebrow">Content Operations Portfolio</p>
-              <p class="brand-name">Judah</p>
-            </div>
-          </div>
-          <a class="button button-ghost" href="#contact">Book a Discovery Call</a>
-        </nav>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Judah Rivera | Content Operations Portfolio</title>
+<meta name="description" content="Content operations support for YouTube creators, coaches and personal brands: calendars, publishing, metadata, thumbnails, Shorts, SOPs and the systems behind consistent content.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Judah Rivera | Content Operations Portfolio">
+<meta property="og:description" content="I keep the content calendar, YouTube Studio and the upload queue moving for creators, so they can stay on camera.">
+<meta property="og:image" content="https://agentxxblue14.github.io/judah-content-portfolio/assets/youtube-results-01.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317314d'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='40' font-weight='700' fill='%23b79545'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#9a7627; --gold-dark:#7b5d1b; --gold-soft:#f5eedb; --gold-light:#e7c98a;
+    --ink:#17314d; --ink-deep:#0f2238; --ink-soft:#2b3f57; --muted:#68717f;
+    --bg:#F7F5F0; --bg-card:#ffffff; --line:rgba(23,49,77,.11);
+    --radius:18px; --radius-lg:26px; --container:1280px;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --good:#1f9d63; --bad:#b3261e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',system-ui,sans-serif;font-weight:400;font-size:17px;line-height:1.55;color:var(--ink);background:var(--bg);overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;border:0;background:none;cursor:pointer;color:inherit}
+  img,video{display:block;max-width:100%}
+  .container{max-width:var(--container);margin:0 auto;padding:0 32px}
+  @media(max-width:700px){.container{padding:0 20px}}
 
-        <section class="hero-grid">
-          <div class="hero-copy reveal">
-            <p class="tag">Content Operations support for YouTube creators, coaches, and personal brands</p>
-            <h1>I help content brands publish consistently without the backend mess.</h1>
-            <p class="lede">
-              I support creator-led businesses with content calendars, upload
-              workflows, titles and descriptions, thumbnail coordination,
-              repurposing systems, SOPs, and publishing support that keeps the
-              content machine moving on schedule.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="#contact">Book a Free Discovery Call</a>
-              <a class="text-link" href="#proof">See my proof of work →</a>
-            </div>
-            <dl class="stat-bar">
-              <div>
-                <dt>137K+</dt>
-                <dd>subscribers grown</dd>
-              </div>
-              <div>
-                <dt>1.5M+</dt>
-                <dd>views supported</dd>
-              </div>
-              <div>
-                <dt>6.8K</dt>
-                <dd>watch hours</dd>
-              </div>
-            </dl>
-          </div>
+  /* nav */
+  .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--gold);z-index:200;box-shadow:0 0 12px rgba(154,118,39,.5)}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 32px;transition:background .3s var(--ease),padding .3s var(--ease),box-shadow .3s}
+  .nav.is-scrolled{background:rgba(247,245,240,.88);backdrop-filter:blur(14px);padding:14px 32px;box-shadow:0 1px 0 var(--line)}
+  .nav__logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.03em;line-height:1;color:var(--gold)}
+  .nav__logo svg{width:26px;height:26px}
+  .nav__links{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:600}
+  .nav__links a{position:relative}
+  .nav__links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+  .nav__links a:hover::after{transform:scaleX(1)}
+  .nav__cta{background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px;transition:transform .3s var(--ease),background .25s}
+  .nav__cta::after{display:none}
+  .nav__cta:hover{transform:translateY(-2px);background:var(--ink-deep)}
+  @media(max-width:860px){.nav__links a{display:none}.nav__links .nav__cta{display:inline-flex}}
 
-          <aside class="hero-card reveal">
-            <p class="card-label">Best fit clients</p>
-            <h2>YouTube creators, coaches, and personal brands who need clean backend execution.</h2>
-            <div class="metric-list">
-              <article>
-                <strong>Planning</strong>
-                <span>calendar building, content mapping, and publishing rhythm</span>
-              </article>
-              <article>
-                <strong>Publishing</strong>
-                <span>titles, descriptions, thumbnails, playlists, and scheduling support</span>
-              </article>
-              <article>
-                <strong>Systems</strong>
-                <span>SOPs, workflows, and repeatable content operations that scale</span>
-              </article>
-            </div>
-          </aside>
-        </section>
-      </header>
+  /* buttons */
+  .btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:18px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .3s var(--ease),background .25s var(--ease),color .25s var(--ease);white-space:nowrap}
+  .btn svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:hover svg{transform:translateX(4px)}
+  .btn--primary{background:var(--gold);color:#fff;box-shadow:0 10px 30px rgba(154,118,39,.28)}
+  .btn--primary:hover{background:var(--gold-dark)}
+  .btn--ghost{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+  .btn--ghost:hover{background:var(--ink);color:#fff}
+  .btn--outline-light{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff}
+  .btn--outline-light:hover{background:rgba(255,255,255,.08)}
 
-      <main>
-        <section class="section services" id="services">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Core Services</p>
-            <h2>What I handle behind the scenes</h2>
-          </div>
-          <div class="card-grid">
-            <article class="service-card reveal">
-              <span class="service-number">01</span>
-              <h3>Content Calendar Management</h3>
-              <p>
-                Building weekly and monthly content plans, organizing themes,
-                aligning post formats, and keeping deliverables on track.
-              </p>
-            </article>
-            <article class="service-card reveal">
-              <span class="service-number">02</span>
-              <h3>YouTube Publishing Support</h3>
-              <p>
-                Uploading videos, preparing descriptions, tags, playlists,
-                visibility settings, and handling scheduled publishing details.
-              </p>
-            </article>
-            <article class="service-card reveal">
-              <span class="service-number">03</span>
-              <h3>Title and Thumbnail Coordination</h3>
-              <p>
-                Supporting title ideation, A/B testing workflows, thumbnail
-                coordination, and metadata packaging for stronger positioning.
-              </p>
-            </article>
-            <article class="service-card reveal">
-              <span class="service-number">04</span>
-              <h3>SOPs and Repurposing Systems</h3>
-              <p>
-                Documenting repeatable workflows, organizing repurposing plans,
-                and creating systems your team can actually follow.
-              </p>
-            </article>
-          </div>
-        </section>
+  /* hero */
+  .hero{position:relative;min-height:100vh;padding:160px 32px 100px;display:flex;align-items:center;overflow:hidden}
+  .hero__inner{max-width:var(--container);margin:0 auto;width:100%;position:relative;z-index:1}
+  .hero__bg-text{position:absolute;bottom:-3vw;left:50%;transform:translateX(-50%);font-size:17vw;font-weight:800;letter-spacing:-.04em;color:rgba(154,118,39,.06);white-space:nowrap;pointer-events:none;line-height:1}
+  .hero__sparkle{position:absolute;color:var(--gold);animation:float-y 6s ease-in-out infinite}
+  .hero__sparkle svg{width:56px;height:56px}
+  .hero__sparkle--a{top:120px;left:14%}
+  .hero__sparkle--b{top:34%;right:12%;animation-delay:-3s}
+  .hero__sparkle--b svg{width:44px;height:44px}
+  .hero__title{font-size:clamp(4rem,13vw,12rem);font-weight:800;line-height:.92;letter-spacing:-.045em;color:var(--gold);margin-bottom:36px}
+  .hero__line{display:block;overflow:hidden;position:relative}
+  .char{display:inline-block;transform:translateY(110%);opacity:0;white-space:pre}
+  .hero__line.is-shown .char{animation:rise .9s cubic-bezier(.22,1,.36,1) forwards}
+  @keyframes rise{to{transform:translateY(0);opacity:1}}
+  .hero__tagline{font-size:clamp(1.1rem,2vw,1.5rem);font-weight:500;max-width:800px;color:var(--ink-soft);margin-bottom:48px}
+  .word-cycle{display:inline-block;position:relative;color:var(--ink);font-weight:800}
+  .word-cycle__current{display:inline-block;transition:transform .4s var(--ease),opacity .4s var(--ease)}
+  .word-cycle__current.is-out{transform:translateY(-60%);opacity:0}
+  .word-cycle__current.is-in{transform:translateY(0);opacity:1}
+  .word-cycle::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--gold);border-radius:2px}
+  .hero__meta{display:flex;gap:64px;margin-bottom:56px;flex-wrap:wrap}
+  .hero__meta-item{display:flex;flex-direction:column;gap:6px}
+  .hero__meta-label{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .hero__meta-value{font-size:16px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:8px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--good);box-shadow:0 0 0 0 rgba(31,157,99,.5);animation:pulse 2s infinite}
+  .hero__actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero__scroll{position:absolute;right:40px;bottom:36px;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+  .hero__scroll-line{width:1px;height:48px;background:var(--gold);animation:scroll-down 2s var(--ease) infinite;transform-origin:top}
+  @media(max-width:700px){.hero{padding:120px 20px 70px;min-height:auto}.hero__meta{gap:28px}.hero__scroll{display:none}.hero__sparkle{display:none}.stat b{min-width:105px}.stat{padding:22px 22px}}
 
-        <section class="section about-section reveal" id="about">
-          <div class="about-grid">
-            <div class="about-copy">
-              <p class="eyebrow">About Me</p>
-              <h2>Hi, I'm Judah.</h2>
-              <p>
-                I'm a content operations specialist based in Koronadal City,
-                Philippines, working remotely with YouTube creators, coaches,
-                and personal brands around the world. I spend my days inside
-                content calendars, YouTube Studio, Asana boards, and publishing
-                workflows — the parts of the business most creators don't want
-                to touch.
-              </p>
-              <p>
-                My style is simple: clear systems, steady execution, no
-                surprises. I use AI tools where they save real time, stay
-                adaptable to whatever stack you already run on, and treat your
-                content backend like it's my own channel. If it's a recurring
-                task, I'll turn it into a checklist so it stops eating your
-                week.
-              </p>
-            </div>
-            <aside class="about-facts">
-              <dl>
-                <div>
-                  <dt>Based in</dt>
-                  <dd>Koronadal City, Philippines</dd>
-                </div>
-                <div>
-                  <dt>Working with</dt>
-                  <dd>YouTube creators, coaches, and personal brands</dd>
-                </div>
-                <div>
-                  <dt>Response time</dt>
-                  <dd>Within 24 hours, weekdays</dd>
-                </div>
-                <div>
-                  <dt>Availability</dt>
-                  <dd>Open for ongoing retainers and project work</dd>
-                </div>
-              </dl>
-            </aside>
-          </div>
-        </section>
+  /* marquee */
+  .marquee{background:var(--ink);color:#fff;padding:30px 0;overflow:hidden}
+  .marquee__track{display:flex;gap:60px;animation:marquee 44s linear infinite;white-space:nowrap;font-size:clamp(1.4rem,3vw,2.4rem);font-weight:800;letter-spacing:-.01em;will-change:transform}
+  .marquee__track span em{font-style:normal;color:var(--gold-light)}
+  .marquee:hover .marquee__track{animation-play-state:paused}
 
-        <section class="section created-section">
-          <div class="proof-heading reveal">
-            <p class="eyebrow">Designs & Videos</p>
-            <h2>Sample creative work I created for clients</h2>
-            <span class="heading-accent"></span>
-            <p class="proof-intro">
-              A mix of social media designs, branded visuals, and edited video
-              samples that show the creative side of my work alongside the
-              content operations and systems support.
-            </p>
-          </div>
+  /* sections */
+  section{padding:120px 0}
+  @media(max-width:700px){section{padding:80px 0}}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .eyebrow--light{color:var(--gold-light)}
+  .section-title{font-size:clamp(2.4rem,5vw,4.2rem);font-weight:800;line-height:1.02;letter-spacing:-.03em}
+  .section-title--lg{font-size:clamp(2.8rem,6vw,5rem)}
+  .text-gold{color:var(--gold)}
 
-          <div class="created-grid">
-            <figure class="created-card reveal">
-              <img src="assets/designs/TOP WORK FROM HOME TIPS.jpg" alt="Social media design about work from home tips"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/Copy of Template for Posting.png" alt="Template-based social media design sample"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/Self-Assessment Checklist Everything You Need to Report for Your Tax Return.png" alt="Checklist style educational social media design"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/918n+PggzIL._AC_CR0,0,0,0_SX960_SY720_.jpg" alt="Product-style branded design example for a client"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/1.png" alt="Social media design sample 1 from 2025 collection"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/2.png" alt="Social media design sample 2 from 2025 collection"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/3.png" alt="Social media design sample 3 from 2025 collection"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/4.png" alt="Social media design sample 4 from 2025 collection"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/1(1).png" alt="Alternative social media design sample from 2025 collection"  loading="lazy" decoding="async" />
-            </figure>
-            <figure class="created-card reveal">
-              <img src="assets/designs/2(1).png" alt="Additional social media design sample from 2025 collection"  loading="lazy" decoding="async" />
-            </figure>
-          </div>
+  /* about */
+  .about__grid{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:start}
+  @media(max-width:900px){.about__grid{grid-template-columns:1fr;gap:56px}}
+  .about__media{position:relative}
+  .stack{display:grid;gap:14px}
+  .stat{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px 30px;display:flex;align-items:baseline;gap:18px;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .stat:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(23,49,77,.08)}
+  .stat b{font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--gold);min-width:150px}
+  .stat span{font-size:15px;color:var(--ink-soft);line-height:1.45}
+  .about__deco{position:absolute;top:-34px;right:-18px;color:var(--gold);animation:float-y 7s ease-in-out infinite}
+  .about__deco svg{width:64px;height:64px}
+  .about__lead{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--ink-soft);margin:32px 0 40px;max-width:620px}
+  .about__lead b{color:var(--ink);font-weight:700}
+  .about__lead+.about__lead{margin-top:-16px}
+  .contact-card{display:flex;flex-direction:column;gap:4px;padding:18px 22px;background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--line);transition:transform .3s var(--ease),border-color .3s var(--ease);position:relative}
+  .contact-card:hover{transform:translateY(-3px);border-color:var(--gold)}
+  .contact-card--lead{background:var(--ink);color:#fff;border-color:var(--ink);padding:24px 28px}
+  .contact-card__label{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .contact-card--lead .contact-card__label{color:rgba(255,255,255,.55)}
+  .contact-card__value{font-size:18px;font-weight:700;word-break:break-word}
+  .contact-card__arrow{position:absolute;right:24px;top:50%;transform:translateY(-50%);width:22px;height:22px;transition:transform .3s var(--ease)}
+  .contact-card:hover .contact-card__arrow{transform:translate(6px,-50%)}
+  .levels{margin-top:44px}
+  .levels__title{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .levels__list{list-style:none}
+  .levels__list li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;font-weight:600}
+  .dots{display:flex;gap:6px;flex-shrink:0}
+  .dots i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--gold);background:transparent}
+  .dots i.on{background:var(--gold)}
+  .dots i.half{background:linear-gradient(90deg,var(--gold) 50%,transparent 50%)}
 
-          <div class="video-grid">
-            <article class="video-card reveal">
-              <video controls preload="metadata" poster="assets/videos/shrek-poster.jpg">
-                <source src="assets/videos/shrek-preview.mp4" type="video/mp4" />
-              </video>
-              <div class="video-copy">
-                <h3>Long-form narrative edit</h3>
-                <p>Story-first structure, paced cuts, and packaging built for retention on longer content.</p>
-              </div>
-            </article>
-            <article class="video-card reveal">
-              <video controls preload="metadata" poster="assets/videos/war-money-poster.jpg">
-                <source src="assets/videos/war-money-preview.mp4" type="video/mp4" />
-              </video>
-              <div class="video-copy">
-                <h3>Finance commentary explainer</h3>
-                <p>Presentation-forward edit focused on retention flow and viewer-ready formatting for commentary content.</p>
-              </div>
-            </article>
-            <article class="video-card reveal">
-              <video controls preload="metadata" poster="assets/videos/beacons-ai-poster.jpg">
-                <source src="assets/videos/beacons-ai-preview.mp4" type="video/mp4" />
-              </video>
-              <div class="video-copy">
-                <h3>AI-assisted creator edit</h3>
-                <p>Workflow sample showing AI-aware polish, clean execution, and production support for client content.</p>
-              </div>
-            </article>
-            <article class="video-card reveal">
-              <video controls preload="metadata" poster="assets/videos/smores-poster.jpg">
-                <source src="assets/videos/smores-preview.mp4" type="video/mp4" />
-              </video>
-              <div class="video-copy">
-                <h3>Product video — branded visual</h3>
-                <p>Client-facing product edit combining creative presentation with clean, branded output.</p>
-              </div>
-            </article>
-            <article class="video-card reveal">
-              <video controls preload="metadata" poster="assets/videos/bali-hanoi-poster.jpg">
-                <source src="assets/videos/bali-hanoi-preview.mp4" type="video/mp4" />
-              </video>
-              <div class="video-copy">
-                <h3>Travel story edit</h3>
-                <p>Travel-style content with narrative pacing, scene flow, and visual storytelling — Bali to Hanoi.</p>
-              </div>
-            </article>
-            <article class="video-card reveal">
-              <video controls preload="metadata" poster="assets/videos/vlog-draft-poster.jpg">
-                <source src="assets/videos/vlog-preview.mp4" type="video/mp4" />
-              </video>
-              <div class="video-copy">
-                <h3>Vlog edit — rhythm and cuts</h3>
-                <p>Vlog-style edit built around rhythm, clean cuts, and audience-friendly flow for creator channels.</p>
-              </div>
-            </article>
-            <article class="video-card reveal">
-              <video controls preload="metadata" poster="assets/videos/storee-linkedin-poster.jpg">
-                <source src="assets/videos/storee-linkedin-preview.mp4" type="video/mp4" />
-              </video>
-              <div class="video-copy">
-                <h3>LinkedIn brand storytelling</h3>
-                <p>Professional social-first edit suited to brand storytelling and platform-native posting on LinkedIn.</p>
-              </div>
-            </article>
-          </div>
-        </section>
+  /* skills */
+  .disciplines__head{margin-bottom:56px}
+  .disciplines__list{list-style:none;border-top:1px solid var(--ink)}
+  .discipline{position:relative;display:grid;grid-template-columns:70px minmax(0,1.6fr) minmax(0,2fr);align-items:center;gap:32px;padding:36px 24px;border-bottom:1px solid var(--ink);overflow:hidden;transition:background .4s var(--ease)}
+  .discipline::before{content:"";position:absolute;inset:0;background:var(--gold-soft);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:0}
+  .discipline:hover::before{transform:scaleX(1)}
+  .discipline>*{position:relative;z-index:1}
+  .discipline__num{font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.1em}
+  .discipline__title{font-size:clamp(1.4rem,2.6vw,2.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;color:var(--ink)}
+  .discipline__desc{font-size:15.5px;color:var(--ink-soft);line-height:1.55}
+  .discipline__desc b{color:var(--ink);font-weight:700}
+  @media(max-width:800px){.discipline{grid-template-columns:50px minmax(0,1fr);grid-template-rows:auto auto;gap:12px 16px;padding:24px 16px}.discipline__desc{grid-column:2}}
+  .process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:64px}
+  @media(max-width:900px){.process{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.process{grid-template-columns:1fr}}
+  .process__step{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .process__step:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(23,49,77,.08)}
+  .process__step span{display:block;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--gold);margin-bottom:14px}
+  .process__step h3{font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+  .process__step p{font-size:14.5px;color:var(--ink-soft)}
 
-        <section class="section proof proof-results" id="proof">
-          <div class="proof-heading reveal">
-            <p class="eyebrow">Results Showcase</p>
-            <h2>Results and Execution in Motion</h2>
-            <span class="heading-accent"></span>
-            <p class="proof-intro">
-              I created content for these clients and supported the execution
-              behind it. The screenshots below show the results, performance,
-              and growth tied to that work in a client-safe way.
-            </p>
-          </div>
+  /* tools (dark) */
+  .tools{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .tools::after{content:"";position:absolute;right:-10%;top:-20%;width:50vw;height:50vw;background:radial-gradient(closest-side,rgba(183,149,69,.28),rgba(183,149,69,0));pointer-events:none}
+  .tools .container{position:relative;z-index:1}
+  .tools .section-title{color:#fff}
+  .skills__head{margin-bottom:56px}
+  .skills__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:900px){.skills__grid{grid-template-columns:1fr}}
+  .skill-card{padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);transition:background .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease)}
+  .skill-card:hover{background:rgba(255,255,255,.06);border-color:rgba(231,201,138,.5);transform:translateY(-6px)}
+  .skill-card__icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border-radius:12px;margin-bottom:28px;color:var(--gold-light)}
+  .skill-card__icon svg{width:22px;height:22px}
+  .skill-card h3{font-size:20px;font-weight:800;margin-bottom:16px}
+  .skill-card ul{list-style:none;display:grid;gap:9px}
+  .skill-card li{font-size:15px;color:rgba(255,255,255,.78);display:flex;gap:10px;align-items:flex-start}
+  .skill-card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-light);flex-shrink:0;margin-top:9px}
+  .skill-card li b{color:#fff;font-weight:700}
+  .tools__note{margin-top:36px;font-size:15px;color:rgba(255,255,255,.7);max-width:820px}
+  .tools__note b{color:#fff;font-weight:700}
 
-          <div class="results-grid">
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/linkedin-results.png" alt="LinkedIn analytics screenshot showing profile and post performance growth"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">Full profile analytics tracking</p>
-                <h3>LinkedIn content performance</h3>
-                <p>
-                  Created and supported content for this brand, then tracked
-                  visibility, follower movement, profile views, and search
-                  appearances to measure what was working.
-                </p>
-              </div>
-            </article>
+  /* work */
+  .work__head{margin-bottom:40px}
+  .work__filter{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:48px;padding:8px;background:var(--bg-card);border:1px solid var(--line);border-radius:999px;width:fit-content;max-width:100%}
+  @media(max-width:700px){.work__filter{border-radius:24px}}
+  .filter-btn{padding:12px 22px;border-radius:999px;font-size:14px;font-weight:700;color:var(--muted);transition:color .3s,background .4s var(--ease),transform .25s var(--ease)}
+  .filter-btn:hover{color:var(--ink)}
+  .filter-btn.is-active{background:var(--ink);color:#fff}
+  .work__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:1000px){.work__grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.work__grid{grid-template-columns:1fr}}
+  .project{display:flex;flex-direction:column;background:var(--bg-card);border-radius:var(--radius-lg);overflow:hidden;color:var(--ink);border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease),opacity .4s}
+  .project:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(23,49,77,.12)}
+  .project.is-hidden{display:none}
+  .project__media{aspect-ratio:16/10;overflow:hidden;background:var(--gold-soft);position:relative}
+  .project__media--square{aspect-ratio:1/1}
+  .project__media--dark{background:var(--ink-deep)}
+  .project__media img,.project__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .project__media--fit img,.project__media--fit video{object-fit:contain}
+  .project__media--pad img{padding:14px}
+  .project__media .badge{position:absolute;left:14px;top:14px;z-index:2;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:rgba(15,34,56,.82);color:#fff;backdrop-filter:blur(6px)}
+  .project__media .play{position:absolute;right:14px;bottom:14px;z-index:2;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25);transition:transform .3s var(--ease)}
+  .project:hover .play{transform:scale(1.08)}
+  .project__media .play svg{width:16px;height:16px;margin-left:2px}
+  .project__info{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .project__tags{display:flex;gap:8px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--gold-soft);color:var(--gold-dark)}
+  .tag--stat{background:#e3f5ec;color:var(--good)}
+  .project h3{font-size:19px;font-weight:800;letter-spacing:-.01em;line-height:1.2}
+  .project p{font-size:14.5px;color:var(--ink-soft)}
+  .project__cta{margin-top:auto;padding-top:6px;font-weight:700;font-size:14.5px;color:var(--gold-dark);display:inline-flex;align-items:center;gap:8px}
+  .project__cta svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+  .project:hover .project__cta svg{transform:translateX(5px)}
+  .mock{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;font-size:12px;color:var(--ink-soft);position:absolute;inset:18px;overflow:hidden;box-shadow:0 14px 40px rgba(23,49,77,.08)}
+  .steps{list-style:none;display:grid;gap:8px}
+  .steps li{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start;font-size:12px;color:var(--ink-soft);line-height:1.4}
+  .steps li b{width:24px;height:24px;border-radius:7px;background:var(--ink);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:800}
+  .steps li strong{color:var(--ink);font-weight:700}
+  .checks{list-style:none;display:grid;gap:8px}
+  .checks li{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:var(--ink-soft);line-height:1.4}
+  .checks li i{flex-shrink:0;width:18px;height:18px;border-radius:6px;background:#e3f5ec;color:var(--good);font-style:normal;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .checks li b{color:var(--ink);font-weight:700}
 
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/pinterest-results.png" alt="Pinterest analytics screenshot showing impressions, clicks, saves, and total audience"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">Impressions, clicks, saves tracked</p>
-                <h3>Pinterest content packaging</h3>
-                <p>
-                  Helped create and package content for this account, with
-                  results reflected in impressions, outbound clicks, saves, and
-                  audience growth.
-                </p>
-              </div>
-            </article>
+  /* contact (dark) */
+  .contact{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:140px 0 100px}
+  .contact::before{content:"";position:absolute;left:-10%;bottom:-30%;width:60vw;height:60vw;background:radial-gradient(closest-side,rgba(183,149,69,.26),rgba(183,149,69,0));pointer-events:none}
+  .contact__bg-text{position:absolute;bottom:-3vw;left:50%;transform:translateX(-50%);font-size:22vw;font-weight:800;letter-spacing:-.04em;color:rgba(255,255,255,.05);white-space:nowrap;pointer-events:none;line-height:1}
+  .contact__inner{position:relative;z-index:1}
+  .contact__title{font-size:clamp(2.5rem,7vw,5.5rem);font-weight:800;line-height:1.02;letter-spacing:-.035em;margin:12px 0 28px}
+  .contact__lead{font-size:clamp(1.05rem,1.6vw,1.3rem);color:rgba(255,255,255,.75);max-width:760px;margin-bottom:40px}
+  .contact__lead b{color:#fff;font-weight:700}
+  .contact__cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px}
+  @media(max-width:900px){.contact__cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.contact__cards{grid-template-columns:1fr}}
+  .contact .contact-card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:#fff}
+  .contact .contact-card__label{color:rgba(255,255,255,.5)}
+  .contact .contact-card:hover{border-color:var(--gold-light)}
+  .contact__actions{display:flex;gap:14px;flex-wrap:wrap}
+  .footer{background:var(--ink);color:rgba(255,255,255,.5);font-size:13px;padding:28px 0;border-top:1px solid rgba(255,255,255,.1)}
+  .footer__inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .footer a{color:rgba(255,255,255,.8)}
 
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/youtube-results-01.png" alt="YouTube analytics screenshot showing strong subscriber growth, views, watch time, and revenue"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">137,450 subs · 1.5M views · 6.8K watch hours</p>
-                <h3>YouTube channel growth</h3>
-                <p>
-                  Created and supported content for this channel through
-                  monetized revenue, including +820 subscribers in a 28-day
-                  window.
-                </p>
-              </div>
-            </article>
+  /* reveal + motion */
+  [data-reveal]{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  [data-reveal].is-visible{opacity:1;transform:translateY(0)}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes float-y{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(8deg)}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,157,99,.5)}70%{box-shadow:0 0 0 10px rgba(31,157,99,0)}100%{box-shadow:0 0 0 0 rgba(31,157,99,0)}}
+  @keyframes scroll-down{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+  .cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;mix-blend-mode:difference}
+  .cursor{width:32px;height:32px;border:1.5px solid #fff;transform:translate(-50%,-50%);transition:width .25s var(--ease),height .25s var(--ease),background .25s var(--ease)}
+  .cursor.is-hover{width:56px;height:56px;background:rgba(255,255,255,.15)}
+  .cursor-dot{width:6px;height:6px;background:#fff;transform:translate(-50%,-50%)}
+  @media(hover:none){.cursor,.cursor-dot{display:none}}
+  html.static [data-reveal],html.static .hero__line .char{opacity:1;transform:none;transition:none}
+  html.static *{animation:none !important}
+  html.static .cursor,html.static .cursor-dot,html.static .hero__scroll{display:none}
+  html.static{scroll-behavior:auto}
+  html.static .hero{min-height:auto}
+  @media(prefers-reduced-motion:reduce){[data-reveal],.char{opacity:1;transform:none;transition:none}*{animation:none !important}}
+</style>
+</head>
+<body>
+<div class="scroll-progress"></div>
+<div class="cursor"></div><div class="cursor-dot"></div>
 
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/youtube-results-02.png" alt="YouTube analytics screenshot showing a growing channel with subscriber and watch time movement"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">779 subs · 614 views · 107.1 watch hours</p>
-                <h3>YouTube mid-stage channel</h3>
-                <p>
-                  Supported content execution for a growing channel in the
-                  reporting window shown, with steady subscriber and watch-time
-                  movement.
-                </p>
-              </div>
-            </article>
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 7 5 11.4 12 12-7 .6-11.4 5-12 12-.6-7-5-11.4-12-12 7-.6 11.4-5 12-12z"/></svg>judah</a>
+  <div class="nav__links">
+    <a href="#about">About</a><a href="#skills">Services</a><a href="#tools">Tools</a><a href="#work">Work</a>
+    <a href="#contact" class="nav__cta">Book a discovery call &rarr;</a>
+  </div>
+</nav>
 
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/youtube-results-03.png" alt="YouTube analytics screenshot showing early-stage channel growth in subscribers, views, and watch time"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">+33 subs in 28 days · 2.8K views</p>
-                <h3>YouTube early-stage channel</h3>
-                <p>
-                  Earlier-stage channel growth tied to content support and
-                  execution, with 83.2 watch hours in the reporting window.
-                </p>
-              </div>
-            </article>
-
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/organic-results.png" alt="Pinterest-style analytics screenshot showing reach, comments, clicks, and published posts"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">Reach beyond existing followers</p>
-                <h3>Instagram Reels performance</h3>
-                <p>
-                  Created and supported Instagram Reels for this client, with
-                  results reflected in views, audience reach, and performance
-                  beyond existing followers.
-                </p>
-              </div>
-            </article>
-
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/neurotic-mom-bakes.png" alt="Short-form content grid for an anonymized creator channel"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">Clipping · packaging · steady output</p>
-                <h3>Shorts and repurposing support</h3>
-                <p>
-                  Created and supported short-form content for creator brands
-                  through clipping, packaging, repurposing, and a steady
-                  publishing cadence.
-                </p>
-              </div>
-            </article>
-
-            <article class="result-card reveal">
-              <figure class="result-shot">
-                <img src="assets/thumb-04.png" alt="Thumbnail example for a finance or commentary style video"  loading="lazy" decoding="async" />
-              </figure>
-              <div class="result-copy">
-                <p class="result-stat">Thumbnail direction + visual coord</p>
-                <h3>Packaging and thumbnails</h3>
-                <p>
-                  Supported the packaging side through thumbnail direction and
-                  visual coordination so content looked ready to publish before
-                  going live.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="proof-subsection reveal">
-            <div class="section-heading section-heading-center">
-              <p class="eyebrow">Systems I Built</p>
-              <h2>From no structure to repeatable content systems</h2>
-            </div>
-            <div class="proof-grid">
-              <article class="proof-card">
-                <h3>Operations Setup</h3>
-                <p>
-                  I recommended and set up tools, views, and workflows where the
-                  client originally had no organized process for content work.
-                </p>
-                <ul class="detail-list">
-                  <li>Asana-based planning and task structure</li>
-                  <li>Inbox workflow recommendations and organization</li>
-                  <li>Clearer handoff and follow-up systems</li>
-                </ul>
-              </article>
-              <article class="proof-card">
-                <h3>SOP and Checklist Building</h3>
-                <p>
-                  I built documentation over time so the team could publish more
-                  consistently with fewer missed steps and less guesswork.
-                </p>
-                <ul class="detail-list">
-                  <li>Release process checklists</li>
-                  <li>Repeatable publishing SOPs</li>
-                  <li>Workflow notes for smoother execution</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section thumbnail-showcase">
-          <div class="proof-heading reveal">
-            <p class="eyebrow">Thumbnail Examples</p>
-            <h2>Packaging Work Across Different Creator Styles</h2>
-            <span class="heading-accent"></span>
-            <p class="proof-intro">
-              A separate visual gallery for thumbnail direction, packaging
-              support, and creator-facing presentation across multiple niches.
-            </p>
-          </div>
-          <div class="thumbnail-grid">
-            <figure class="thumb-card reveal">
-              <img src="assets/thumb-01.jpeg" alt="Thumbnail example for a Christmas cookie design video"  loading="lazy" decoding="async" />
-              <figcaption>Seasonal baking · recipe channel</figcaption>
-            </figure>
-            <figure class="thumb-card reveal">
-              <img src="assets/thumb-02.jpeg" alt="Thumbnail example for a creator business video"  loading="lazy" decoding="async" />
-              <figcaption>Creator business · educational</figcaption>
-            </figure>
-            <figure class="thumb-card reveal">
-              <img src="assets/thumb-03.png" alt="Thumbnail example focused on educational or promotional creator content"  loading="lazy" decoding="async" />
-              <figcaption>Promotional · creator content</figcaption>
-            </figure>
-            <figure class="thumb-card reveal">
-              <img src="assets/thumb-04.png" alt="Thumbnail example for a finance or commentary style video"  loading="lazy" decoding="async" />
-              <figcaption>Finance · commentary style</figcaption>
-            </figure>
-            <figure class="thumb-card reveal">
-              <img src="assets/thumb-05.png" alt="Thumbnail example for a seasonal design or tutorial video"  loading="lazy" decoding="async" />
-              <figcaption>Seasonal · tutorial format</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section class="section testimonials-section">
-          <div class="proof-heading reveal">
-            <p class="eyebrow">Testimonials</p>
-            <h2>Client Feedback</h2>
-            <span class="heading-accent"></span>
-            <p class="proof-intro">
-              A few client testimonial videos that speak to the quality of my
-              work, communication, and support behind the scenes.
-            </p>
-          </div>
-          <div class="proof-grid">
-            <article class="proof-card reveal">
-              <h3>Client Testimonial 01</h3>
-              <p>
-                Feedback from a client sharing their experience working with me
-                and the support I provided behind the scenes.
-              </p>
-              <a class="button" href="https://www.youtube.com/shorts/8PcFft93MeA" target="_blank" rel="noopener noreferrer">Watch Testimonial</a>
-            </article>
-            <article class="proof-card reveal">
-              <h3>Client Testimonial 02</h3>
-              <p>
-                A short client testimonial covering trust, execution, and the
-                impact of my work on their operations and content flow.
-              </p>
-              <a class="button" href="https://www.youtube.com/shorts/7UhRzQI-cWA" target="_blank" rel="noopener noreferrer">Watch Testimonial</a>
-            </article>
-            <article class="proof-card reveal">
-              <h3>Client Testimonial 03</h3>
-              <p>
-                Another client perspective on the experience of working with me
-                and the value I brought to their business support.
-              </p>
-              <a class="button" href="https://www.youtube.com/shorts/XalHnjBWxYo" target="_blank" rel="noopener noreferrer">Watch Testimonial</a>
-            </article>
-            <article class="proof-card reveal">
-              <h3>Client Testimonial 04</h3>
-              <p>
-                A direct video testimonial from a client speaking about the
-                experience of working with me and the support I provided.
-              </p>
-              <a class="button" href="assets/videos/morgan-testimonial-preview.mp4" target="_blank" rel="noopener noreferrer">Watch Testimonial</a>
-            </article>
-          </div>
-        </section>
-
-        <section class="section toolkit">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Tools I Can Work With</p>
-            <h2>Fast to plug into your process</h2>
-          </div>
-          <div class="tool-pills reveal">
-            <span>YouTube Studio</span>
-            <span>Google Workspace</span>
-            <span>Notion</span>
-            <span>Asana</span>
-            <span>ClickUp</span>
-            <span>Trello</span>
-            <span>Canva</span>
-            <span>Microsoft Office</span>
-          </div>
-        </section>
-
-        <section class="section process">
-          <div class="section-heading reveal">
-            <p class="eyebrow">How We Work</p>
-            <h2>A simple process for busy clients</h2>
-          </div>
-          <div class="process-list">
-            <article class="process-step reveal">
-              <span>01</span>
-              <h3>Plan</h3>
-              <p>I review your content goals, current workflow, and publishing bottlenecks.</p>
-            </article>
-            <article class="process-step reveal">
-              <span>02</span>
-              <h3>Package</h3>
-              <p>I organize titles, descriptions, thumbnails, assets, schedules, and post details.</p>
-            </article>
-            <article class="process-step reveal">
-              <span>03</span>
-              <h3>Publish</h3>
-              <p>I keep the backend execution moving so you can stay focused on creating and showing up.</p>
-            </article>
-            <article class="process-step reveal">
-              <span>04</span>
-              <h3>Refine</h3>
-              <p>I review results, spot what is working, and adapt the workflow so content keeps improving over time.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section contact reveal" id="contact">
-          <div class="section-heading">
-            <p class="eyebrow">Contact</p>
-            <h2>Let's make your operations smoother.</h2>
-          </div>
-          <div class="contact-card">
-            <p class="contact-lead">
-              Free 30-minute discovery call — no pressure, no pitch. Tell me
-              what's slowing your content down and I'll tell you exactly how I
-              can help.
-            </p>
-            <dl class="contact-meta">
-              <div>
-                <dt>Email</dt>
-                <dd><a href="mailto:katrinajudah14@gmail.com">katrinajudah14@gmail.com</a></dd>
-              </div>
-              <div>
-                <dt>Location</dt>
-                <dd>Koronadal City, South Cotabato, Philippines</dd>
-              </div>
-              <div>
-                <dt>Response time</dt>
-                <dd>Within 24 hours, weekdays</dd>
-              </div>
-              <div>
-                <dt>Availability</dt>
-                <dd>Open for retainers and project work</dd>
-              </div>
-            </dl>
-            <a class="button" href="mailto:katrinajudah14@gmail.com?subject=Discovery%20Call%20Request">Email me to book</a>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <p>&copy; <span id="year"></span> Judah — Content Operations Portfolio</p>
-        <p>
-          <a href="mailto:katrinajudah14@gmail.com">katrinajudah14@gmail.com</a>
-          <span aria-hidden="true"> · </span>
-          Koronadal City, Philippines
-        </p>
-      </footer>
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero__bg-text" aria-hidden="true">CONTENT OPS</div>
+  <div class="hero__sparkle hero__sparkle--a" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 7 5 11.4 12 12-7 .6-11.4 5-12 12-.6-7-5-11.4-12-12 7-.6 11.4-5 12-12z"/></svg></div>
+  <div class="hero__sparkle hero__sparkle--b" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 7 5 11.4 12 12-7 .6-11.4 5-12 12-.6-7-5-11.4-12-12 7-.6 11.4-5 12-12z"/></svg></div>
+  <div class="hero__inner">
+    <h1 class="hero__title">
+      <span class="hero__line">Judah</span>
+      <span class="hero__line">Rivera</span>
+    </h1>
+    <p class="hero__tagline" data-reveal>I keep <span class="word-cycle" data-words="the content calendar,YouTube Studio,the upload queue,the thumbnails,the Shorts pipeline,the SOPs"><span class="word-cycle__current is-in">the content calendar</span></span> moving for YouTube creators, coaches and personal brands, so you can stay on camera.</p>
+    <div class="hero__meta" data-reveal>
+      <div class="hero__meta-item"><span class="hero__meta-label">Location</span><span class="hero__meta-value">Koronadal City, Philippines, remote</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-label">Works with</span><span class="hero__meta-value">YouTube creators, coaches, personal brands</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-label">Available</span><span class="hero__meta-value"><span class="dot"></span>Retainers and project work</span></div>
     </div>
+    <div class="hero__actions" data-reveal>
+      <a href="#work" class="btn btn--primary">See the proof <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#contact" class="btn btn--ghost">Book a free discovery call</a>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span>Scroll</span><div class="hero__scroll-line"></div></div>
+</section>
 
-    <script src="script.js"></script>
-  </body>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Content calendars <em>&#10022;</em> YouTube publishing <em>&#10022;</em> Titles and thumbnails <em>&#10022;</em> Shorts and repurposing <em>&#10022;</em> Video editing <em>&#10022;</em> Social design <em>&#10022;</em> SOPs and checklists <em>&#10022;</em> Analytics tracking <em>&#10022;</em></span>
+    <span>Content calendars <em>&#10022;</em> YouTube publishing <em>&#10022;</em> Titles and thumbnails <em>&#10022;</em> Shorts and repurposing <em>&#10022;</em> Video editing <em>&#10022;</em> Social design <em>&#10022;</em> SOPs and checklists <em>&#10022;</em> Analytics tracking <em>&#10022;</em></span>
+  </div>
+</div>
+
+<!-- 01 ABOUT -->
+<section id="about" class="about">
+  <div class="container about__grid">
+    <div class="about__media" data-reveal>
+      <div class="stack">
+        <div class="stat"><b>137K+</b><span>subscribers on a monetized YouTube channel I created and supported content for</span></div>
+        <div class="stat"><b>1.5M+</b><span>views supported across that channel, with 6.8K watch hours in the reporting window</span></div>
+        <div class="stat"><b>3</b><span>YouTube channels at different stages, from +33 subscribers a month to six figures</span></div>
+        <div class="stat"><b>4</b><span>clients who recorded a video testimonial about working with me</span></div>
+      </div>
+      <div class="about__deco" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 7 5 11.4 12 12-7 .6-11.4 5-12 12-.6-7-5-11.4-12-12 7-.6 11.4-5 12-12z"/></svg></div>
+    </div>
+    <div class="about__content">
+      <span class="eyebrow" data-reveal>01 &middot; About</span>
+      <h2 class="section-title" data-reveal>Consistent publishing,<br><span class="text-gold">without the backend mess.</span></h2>
+      <p class="about__lead" data-reveal>I am a content operations specialist based in Koronadal City, Philippines, working remotely with YouTube creators, coaches and personal brands around the world. I spend my days inside content calendars, YouTube Studio, Asana boards and publishing workflows, <b>the parts of the business most creators do not want to touch.</b></p>
+      <p class="about__lead" data-reveal>My style is simple: clear systems, steady execution, no surprises. I use AI tools where they save real time, adapt to whatever stack you already run on, and treat your content backend like it is my own channel. <b>If it is a recurring task, I turn it into a checklist so it stops eating your week.</b></p>
+      <div data-reveal>
+        <a href="mailto:katrinajudah14@gmail.com?subject=Discovery%20Call%20Request" class="contact-card contact-card--lead">
+          <span class="contact-card__label">Write to me</span>
+          <span class="contact-card__value">katrinajudah14@gmail.com</span>
+          <svg class="contact-card__arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+      <div class="levels" data-reveal>
+        <h3 class="levels__title">Where I stand</h3>
+        <ul class="levels__list">
+          <li><span>Content calendars and publishing</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+          <li><span>YouTube Studio, metadata and packaging</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+          <li><span>SOPs, checklists and repurposing systems</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+          <li><span>Thumbnails and social design</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="half"></i></span></li>
+          <li><span>Video editing, long form and short form</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 SERVICES -->
+<section id="skills" class="disciplines">
+  <div class="container">
+    <div class="disciplines__head">
+      <span class="eyebrow" data-reveal>02 &middot; Services</span>
+      <h2 class="section-title section-title--lg" data-reveal>What I handle<br><span class="text-gold">behind the scenes.</span></h2>
+    </div>
+    <ul class="disciplines__list">
+      <li class="discipline" data-reveal><span class="discipline__num">01</span><h3 class="discipline__title">Content calendar management</h3><p class="discipline__desc">Weekly and monthly content plans, themes organised, post formats aligned and deliverables kept on track. <b>You always know what is going out, when, and what is still missing.</b></p></li>
+      <li class="discipline" data-reveal><span class="discipline__num">02</span><h3 class="discipline__title">YouTube publishing support</h3><p class="discipline__desc">Uploads, descriptions, tags, playlists, end screens, visibility settings and scheduled publishing handled inside YouTube Studio. <b>The video is ready to go before you have to look at it.</b></p></li>
+      <li class="discipline" data-reveal><span class="discipline__num">03</span><h3 class="discipline__title">Titles, thumbnails and packaging</h3><p class="discipline__desc">Title ideation, A/B testing workflows, thumbnail direction and coordination, and metadata packaging for stronger positioning. <b>Five thumbnails across five niches are in the work section below.</b></p></li>
+      <li class="discipline" data-reveal><span class="discipline__num">04</span><h3 class="discipline__title">Shorts, clipping and repurposing</h3><p class="discipline__desc">Long videos clipped into Shorts and Reels, packaged and posted on a steady cadence, with the same asset reused across YouTube, Instagram, Pinterest and LinkedIn. <b>One recording, a week of posts.</b></p></li>
+      <li class="discipline" data-reveal><span class="discipline__num">05</span><h3 class="discipline__title">Video editing and social design</h3><p class="discipline__desc">Long form narrative edits, explainers, vlogs, product videos and platform native social edits, plus branded post designs and carousels. <b>Seven edited samples and ten designs are below.</b></p></li>
+      <li class="discipline" data-reveal><span class="discipline__num">06</span><h3 class="discipline__title">SOPs and content systems</h3><p class="discipline__desc">Repeatable workflows written down, release checklists, Asana and inbox structure, and repurposing plans your team can actually follow. <b>Built where the client had no organised process at all.</b></p></li>
+    </ul>
+    <div class="process">
+      <div class="process__step" data-reveal><span>STEP 01</span><h3>Plan</h3><p>I review your content goals, current workflow and publishing bottlenecks.</p></div>
+      <div class="process__step" data-reveal><span>STEP 02</span><h3>Package</h3><p>I organise titles, descriptions, thumbnails, assets, schedules and post details.</p></div>
+      <div class="process__step" data-reveal><span>STEP 03</span><h3>Publish</h3><p>I keep the backend moving so you can stay focused on creating and showing up.</p></div>
+      <div class="process__step" data-reveal><span>STEP 04</span><h3>Refine</h3><p>I review results, spot what is working and adapt the workflow so content keeps improving.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 TOOLS -->
+<section id="tools" class="tools">
+  <div class="container">
+    <div class="skills__head">
+      <span class="eyebrow eyebrow--light" data-reveal>03 &middot; Tools</span>
+      <h2 class="section-title section-title--lg" data-reveal>Fast to plug into<br><span class="text-gold">your process.</span></h2>
+    </div>
+    <div class="skills__grid">
+      <div class="skill-card" data-reveal>
+        <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Publishing</h3>
+        <ul><li><b>YouTube Studio</b>: uploads, metadata, playlists, scheduling, analytics</li><li>Instagram, Pinterest and LinkedIn posting and analytics</li><li><b>Canva</b> for thumbnails, carousels and post designs</li><li>Google Workspace and Microsoft Office</li></ul>
+      </div>
+      <div class="skill-card" data-reveal>
+        <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>Planning and tracking</h3>
+        <ul><li><b>Asana</b>, set up from scratch for a client with no process</li><li>Notion, ClickUp and Trello boards</li><li>Content calendars in Sheets and Notion</li><li>Release checklists and publishing SOPs</li></ul>
+      </div>
+      <div class="skill-card" data-reveal>
+        <div class="skill-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div>
+        <h3>How I work</h3>
+        <ul><li>AI tools where they save real time, never where they cost quality</li><li>I adapt to the stack you already run, no migration needed</li><li>Every recurring task becomes a checklist</li><li>Replies within 24 hours on weekdays</li></ul>
+      </div>
+    </div>
+    <p class="tools__note" data-reveal><b>No tool you use is a blocker.</b> If it is a publishing tool, a board or a calendar, I have either used it or will be fluent in it by the end of the first week. Day one is a login, not a course.</p>
+  </div>
+</section>
+
+<!-- 04 WORK -->
+<section id="work" class="work">
+  <div class="container">
+    <div class="work__head">
+      <span class="eyebrow" data-reveal>04 &middot; The work</span>
+      <h2 class="section-title section-title--lg" data-reveal>Results, edits and designs,<br><span class="text-gold">client safe.</span></h2>
+    </div>
+    <div class="work__filter" data-reveal>
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="results">Results</button>
+      <button class="filter-btn" data-filter="testimonial">Testimonials</button>
+      <button class="filter-btn" data-filter="video">Video edits</button>
+      <button class="filter-btn" data-filter="thumb">Thumbnails</button>
+      <button class="filter-btn" data-filter="design">Designs</button>
+      <button class="filter-btn" data-filter="systems">Systems</button>
+    </div>
+    <div class="work__grid">
+
+      <!-- RESULTS -->
+      <a class="project" data-cat="results" href="assets/youtube-results-01.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--fit project__media--pad"><span class="badge">YouTube</span><img src="assets/youtube-results-01.png" alt="YouTube analytics showing 137,450 subscribers, 1.5M views and 6.8K watch hours" loading="lazy" decoding="async"></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag tag--stat">137,450 subs</span><span class="tag">1.5M views</span></div>
+          <h3>YouTube channel growth</h3>
+          <p>Created and supported content for this monetized channel, including +820 subscribers in a 28 day window and 6.8K watch hours.</p>
+          <span class="project__cta">Open the screenshot <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="results" href="assets/youtube-results-02.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--fit project__media--pad"><span class="badge">YouTube</span><img src="assets/youtube-results-02.png" alt="YouTube analytics for a growing channel with subscriber and watch time movement" loading="lazy" decoding="async"></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag tag--stat">779 subs</span><span class="tag">107 watch hours</span></div>
+          <h3>YouTube mid stage channel</h3>
+          <p>Supported content execution for a growing channel in the reporting window shown, with steady subscriber and watch time movement.</p>
+          <span class="project__cta">Open the screenshot <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="results" href="assets/youtube-results-03.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--fit project__media--pad"><span class="badge">YouTube</span><img src="assets/youtube-results-03.png" alt="YouTube analytics for an early stage channel showing subscriber, view and watch time growth" loading="lazy" decoding="async"></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag tag--stat">+33 subs in 28 days</span><span class="tag">2.8K views</span></div>
+          <h3>YouTube early stage channel</h3>
+          <p>Earlier stage growth tied to content support and execution, with 83.2 watch hours in the reporting window.</p>
+          <span class="project__cta">Open the screenshot <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="results" href="assets/linkedin-results.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--fit project__media--pad"><span class="badge">LinkedIn</span><img src="assets/linkedin-results.png" alt="LinkedIn analytics showing profile and post performance growth" loading="lazy" decoding="async"></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Profile analytics</span></div>
+          <h3>LinkedIn content performance</h3>
+          <p>Created and supported content for this brand, then tracked visibility, follower movement, profile views and search appearances.</p>
+          <span class="project__cta">Open the screenshot <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="results" href="assets/pinterest-results.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--fit project__media--pad"><span class="badge">Pinterest</span><img src="assets/pinterest-results.png" alt="Pinterest analytics showing impressions, clicks, saves and total audience" loading="lazy" decoding="async"></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Impressions, clicks, saves</span></div>
+          <h3>Pinterest content packaging</h3>
+          <p>Helped create and package content for this account, with results in impressions, outbound clicks, saves and audience growth.</p>
+          <span class="project__cta">Open the screenshot <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="results" href="assets/organic-results.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--fit project__media--pad"><span class="badge">Instagram</span><img src="assets/organic-results.png" alt="Instagram Reels insights showing reach beyond existing followers" loading="lazy" decoding="async"></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Reach beyond followers</span></div>
+          <h3>Instagram Reels performance</h3>
+          <p>Created and supported Reels for this client, with results reflected in views, audience reach and performance beyond existing followers.</p>
+          <span class="project__cta">Open the screenshot <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="results" href="assets/neurotic-mom-bakes.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media"><span class="badge">Shorts</span><img src="assets/neurotic-mom-bakes.png" alt="Short form content grid for a creator channel" loading="lazy" decoding="async"></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Clipping</span><span class="tag">Steady output</span></div>
+          <h3>Shorts and repurposing support</h3>
+          <p>Short form content for creator brands through clipping, packaging, repurposing and a steady publishing cadence.</p>
+          <span class="project__cta">Open the grid <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- TESTIMONIALS -->
+      <a class="project" data-cat="testimonial" href="https://www.youtube.com/shorts/8PcFft93MeA" target="_blank" rel="noopener noreferrer" data-reveal>
+        <div class="project__media"><span class="badge">Testimonial</span><img src="https://i.ytimg.com/vi/8PcFft93MeA/hqdefault.jpg" alt="Client testimonial video 1" loading="lazy" decoding="async"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Client video</span></div>
+          <h3>Client testimonial 01</h3>
+          <p>A client sharing their experience working with me and the support I provided behind the scenes.</p>
+          <span class="project__cta">Watch on YouTube <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="testimonial" href="https://www.youtube.com/shorts/7UhRzQI-cWA" target="_blank" rel="noopener noreferrer" data-reveal>
+        <div class="project__media"><span class="badge">Testimonial</span><img src="https://i.ytimg.com/vi/7UhRzQI-cWA/hqdefault.jpg" alt="Client testimonial video 2" loading="lazy" decoding="async"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Client video</span></div>
+          <h3>Client testimonial 02</h3>
+          <p>Trust, execution and the impact of the work on their operations and content flow.</p>
+          <span class="project__cta">Watch on YouTube <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a class="project" data-cat="testimonial" href="https://www.youtube.com/shorts/XalHnjBWxYo" target="_blank" rel="noopener noreferrer" data-reveal>
+        <div class="project__media"><span class="badge">Testimonial</span><img src="https://i.ytimg.com/vi/XalHnjBWxYo/hqdefault.jpg" alt="Client testimonial video 3" loading="lazy" decoding="async"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Client video</span></div>
+          <h3>Client testimonial 03</h3>
+          <p>Another client's perspective on working with me and the value it brought to their business support.</p>
+          <span class="project__cta">Watch on YouTube <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <div class="project" data-cat="testimonial" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">Testimonial</span><video controls preload="none" playsinline poster="assets/videos/morgan-testimonial-poster.jpg"><source src="assets/videos/morgan-testimonial-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Client video</span></div>
+          <h3>Client testimonial 04</h3>
+          <p>A direct video testimonial from a client about the experience of working with me. Press play.</p>
+        </div>
+      </div>
+
+      <!-- VIDEO EDITS -->
+      <div class="project" data-cat="video" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">Long form</span><video controls preload="none" playsinline poster="assets/videos/shrek-poster.jpg"><source src="assets/videos/shrek-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Narrative edit</span></div>
+          <h3>Long form narrative edit</h3>
+          <p>Story first structure, paced cuts and packaging built for retention on longer content.</p>
+        </div>
+      </div>
+
+      <div class="project" data-cat="video" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">Explainer</span><video controls preload="none" playsinline poster="assets/videos/war-money-poster.jpg"><source src="assets/videos/war-money-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Commentary</span></div>
+          <h3>Finance commentary explainer</h3>
+          <p>Presentation forward edit focused on retention flow and viewer ready formatting for commentary content.</p>
+        </div>
+      </div>
+
+      <div class="project" data-cat="video" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">Vertical</span><video controls preload="none" playsinline poster="assets/videos/beacons-ai-poster.jpg"><source src="assets/videos/beacons-ai-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Creator edit</span></div>
+          <h3>AI assisted creator edit</h3>
+          <p>Workflow sample showing AI aware polish, clean execution and production support for client content.</p>
+        </div>
+      </div>
+
+      <div class="project" data-cat="video" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">Product</span><video controls preload="none" playsinline poster="assets/videos/smores-poster.jpg"><source src="assets/videos/smores-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Branded</span></div>
+          <h3>Product video, branded visual</h3>
+          <p>Client facing product edit combining creative presentation with clean, branded output.</p>
+        </div>
+      </div>
+
+      <div class="project" data-cat="video" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">Travel</span><video controls preload="none" playsinline poster="assets/videos/bali-hanoi-poster.jpg"><source src="assets/videos/bali-hanoi-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Story edit</span></div>
+          <h3>Travel story edit, Bali to Hanoi</h3>
+          <p>Travel style content with narrative pacing, scene flow and visual storytelling.</p>
+        </div>
+      </div>
+
+      <div class="project" data-cat="video" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">Vlog</span><video controls preload="none" playsinline poster="assets/videos/vlog-draft-poster.jpg"><source src="assets/videos/vlog-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Rhythm and cuts</span></div>
+          <h3>Vlog edit</h3>
+          <p>Vlog style edit built around rhythm, clean cuts and audience friendly flow for creator channels.</p>
+        </div>
+      </div>
+
+      <div class="project" data-cat="video" data-reveal>
+        <div class="project__media project__media--dark project__media--fit"><span class="badge">LinkedIn</span><video controls preload="none" playsinline poster="assets/videos/storee-linkedin-poster.jpg"><source src="assets/videos/storee-linkedin-preview.mp4" type="video/mp4"></video></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Brand story</span></div>
+          <h3>LinkedIn brand storytelling</h3>
+          <p>Professional social first edit suited to brand storytelling and platform native posting on LinkedIn.</p>
+        </div>
+      </div>
+
+      <!-- THUMBNAILS -->
+      <a class="project" data-cat="thumb" href="assets/thumb-01.jpeg" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media"><span class="badge">Thumbnail</span><img src="assets/thumb-01.jpeg" alt="Thumbnail for a Christmas cookie design video" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Recipe channel</span></div><h3>Seasonal baking</h3><p>Packaging for a recipe channel's holiday upload.</p></div>
+      </a>
+      <a class="project" data-cat="thumb" href="assets/thumb-02.jpeg" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media"><span class="badge">Thumbnail</span><img src="assets/thumb-02.jpeg" alt="Thumbnail for a creator business video" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Educational</span></div><h3>Creator business</h3><p>Thumbnail direction for an educational creator business video.</p></div>
+      </a>
+      <a class="project" data-cat="thumb" href="assets/thumb-03-web.jpg" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media"><span class="badge">Thumbnail</span><img src="assets/thumb-03-web.jpg" alt="Thumbnail for promotional creator content" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Promotional</span></div><h3>Promotional creator content</h3><p>Creator facing presentation for a promotional upload.</p></div>
+      </a>
+      <a class="project" data-cat="thumb" href="assets/thumb-04.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media"><span class="badge">Thumbnail</span><img src="assets/thumb-04.png" alt="Thumbnail for a finance commentary video" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Commentary</span></div><h3>Finance commentary</h3><p>Thumbnail direction and visual coordination for a finance channel.</p></div>
+      </a>
+      <a class="project" data-cat="thumb" href="assets/thumb-05.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media"><span class="badge">Thumbnail</span><img src="assets/thumb-05.png" alt="Thumbnail for a seasonal tutorial video" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Tutorial</span></div><h3>Seasonal tutorial</h3><p>Packaging for a seasonal tutorial format.</p></div>
+      </a>
+
+      <!-- DESIGNS -->
+      <a class="project" data-cat="design" href="assets/designs/TOP WORK FROM HOME TIPS.jpg" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square project__media--fit"><span class="badge">Design</span><img src="assets/designs/TOP WORK FROM HOME TIPS.jpg" alt="Social media design about work from home tips" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Pinterest</span></div><h3>Work from home tips</h3><p>Vertical pin design for an educational post.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/Copy of Template for Posting.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/Copy of Template for Posting.png" alt="Template based social media design" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Template</span></div><h3>Posting template</h3><p>A reusable template so the client's feed stays consistent without a designer on call.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/Self-Assessment Checklist Everything You Need to Report for Your Tax Return.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/Self-Assessment Checklist Everything You Need to Report for Your Tax Return.png" alt="Checklist style educational social media design" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Checklist</span></div><h3>Tax return checklist</h3><p>Educational checklist post for a finance brand.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/918n+PggzIL._AC_CR0,0,0,0_SX960_SY720_.jpg" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/918n+PggzIL._AC_CR0,0,0,0_SX960_SY720_.jpg" alt="Product style branded design" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Product</span></div><h3>Product visual</h3><p>Product style branded design for a client listing.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/1.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/1.png" alt="Social media design sample 1" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Social</span></div><h3>Social design 01</h3><p>From the 2025 collection.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/2.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/2.png" alt="Social media design sample 2" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Social</span></div><h3>Social design 02</h3><p>From the 2025 collection.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/3.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/3.png" alt="Social media design sample 3" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Social</span></div><h3>Social design 03</h3><p>From the 2025 collection.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/4.png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/4.png" alt="Social media design sample 4" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Social</span></div><h3>Social design 04</h3><p>From the 2025 collection.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/1(1).png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/1(1).png" alt="Social media design sample 5" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Social</span></div><h3>Social design 05</h3><p>From the 2025 collection.</p></div>
+      </a>
+      <a class="project" data-cat="design" href="assets/designs/2(1).png" target="_blank" rel="noopener" data-reveal>
+        <div class="project__media project__media--square"><span class="badge">Design</span><img src="assets/designs/2(1).png" alt="Social media design sample 6" loading="lazy" decoding="async"></div>
+        <div class="project__info"><div class="project__tags"><span class="tag">Social</span></div><h3>Social design 06</h3><p>From the 2025 collection.</p></div>
+      </a>
+
+      <!-- SYSTEMS -->
+      <div class="project" data-cat="systems" data-reveal>
+        <div class="project__media"><div class="mock"><ul class="checks">
+          <li><i>&#10003;</i><span><b>Asana</b> planning and task structure, built where there was none</span></li>
+          <li><i>&#10003;</i><span><b>Inbox workflow</b> recommendations and organisation</span></li>
+          <li><i>&#10003;</i><span><b>Handoff and follow up</b> systems between creator, editor and publisher</span></li>
+          <li><i>&#10003;</i><span><b>Tools and views</b> recommended and set up, then documented</span></li>
+        </ul></div></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Systems</span><span class="tag">Operations setup</span></div>
+          <h3>From no structure to a content system</h3>
+          <p>I recommended and set up the tools, views and workflows where the client originally had no organised process for content work.</p>
+        </div>
+      </div>
+
+      <div class="project" data-cat="systems" data-reveal>
+        <div class="project__media"><div class="mock"><ul class="steps">
+          <li><b>1</b><span><strong>Release checklist.</strong> Title, description, tags, thumbnail, end screen, playlist, schedule, all ticked before publish.</span></li>
+          <li><b>2</b><span><strong>Publishing SOP.</strong> The same steps every time, so anyone on the team can run an upload.</span></li>
+          <li><b>3</b><span><strong>Repurposing plan.</strong> One long video becomes Shorts, pins and posts on a set cadence.</span></li>
+          <li><b>4</b><span><strong>Workflow notes.</strong> The small things that used to live in one person's head.</span></li>
+        </ul></div></div>
+        <div class="project__info">
+          <div class="project__tags"><span class="tag">Systems</span><span class="tag">SOPs</span></div>
+          <h3>SOPs and checklists that get followed</h3>
+          <p>Documentation built over time so the team publishes more consistently with fewer missed steps and less guesswork.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 05 CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact__bg-text" aria-hidden="true">JUDAH</div>
+  <div class="container contact__inner">
+    <span class="eyebrow eyebrow--light" data-reveal>05 &middot; Contact</span>
+    <h2 class="contact__title" data-reveal>Let's make your<br><span class="text-gold">content machine run.</span></h2>
+    <p class="contact__lead" data-reveal><b>Free 30 minute discovery call, no pressure, no pitch.</b> Tell me what is slowing your content down and I will tell you exactly how I can help, and what I would take off your plate in the first week.</p>
+    <div class="contact__cards" data-reveal>
+      <a class="contact-card" href="mailto:katrinajudah14@gmail.com"><span class="contact-card__label">Email</span><span class="contact-card__value">katrinajudah14@gmail.com</span></a>
+      <div class="contact-card"><span class="contact-card__label">Location</span><span class="contact-card__value">Koronadal City, South Cotabato, Philippines</span></div>
+      <div class="contact-card"><span class="contact-card__label">Response time</span><span class="contact-card__value">Within 24 hours, weekdays</span></div>
+      <div class="contact-card"><span class="contact-card__label">Availability</span><span class="contact-card__value">Open for retainers and project work</span></div>
+    </div>
+    <div class="contact__actions" data-reveal>
+      <a href="mailto:katrinajudah14@gmail.com?subject=Discovery%20Call%20Request" class="btn btn--primary">Email me to book <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      <a href="#work" class="btn btn--outline-light">Back to the work</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>&copy; <span id="year">2026</span> Judah Rivera &middot; Content Operations Portfolio</span>
+    <span><a href="mailto:katrinajudah14@gmail.com">katrinajudah14@gmail.com</a> &middot; Koronadal City, Philippines &middot; <a href="#top">Back to top &uarr;</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isTouch = matchMedia('(hover: none)').matches;
+  var isStatic = /[?&]static=1/.test(location.search);
+  if (isStatic) { document.documentElement.classList.add('static'); reduce = true; }
+  var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+  // letter reveal
+  document.querySelectorAll('.hero__line').forEach(function(line){
+    var text = line.textContent.trim(); line.textContent = '';
+    Array.prototype.forEach.call(text, function(ch, i){
+      var s = document.createElement('span'); s.className = 'char'; s.textContent = ch; s.style.animationDelay = (i*35)+'ms'; line.appendChild(s);
+    });
+  });
+  requestAnimationFrame(function(){ document.querySelectorAll('.hero__line').forEach(function(line,i){ setTimeout(function(){ line.classList.add('is-shown'); line.querySelectorAll('.char').forEach(function(ch){ ch.style.opacity='1'; ch.style.transform='translateY(0)'; }); }, 200 + i*220); }); });
+  setTimeout(function(){ document.querySelectorAll('.char').forEach(function(ch){ ch.style.opacity='1'; ch.style.transform='translateY(0)'; }); }, 2500);
+
+  // reveal
+  var els = document.querySelectorAll('[data-reveal]');
+  if (isStatic || reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('is-visible'); }); }
+  else {
+    var io = new IntersectionObserver(function(entries){ entries.forEach(function(en,i){ if(en.isIntersecting){ setTimeout(function(){ en.target.classList.add('is-visible'); }, i*60); io.unobserve(en.target);} }); }, {threshold:.12, rootMargin:'0px 0px -60px 0px'});
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 4000);
+  }
+
+  // word cycle
+  var wc = document.querySelector('.word-cycle');
+  if (wc && !reduce) {
+    var words = wc.dataset.words.split(','), cur = wc.querySelector('.word-cycle__current'), idx = 0;
+    setInterval(function(){ cur.classList.remove('is-in'); cur.classList.add('is-out'); setTimeout(function(){ idx=(idx+1)%words.length; cur.textContent = words[idx]; cur.classList.remove('is-out'); cur.classList.add('is-in'); }, 260); }, 2600);
+  }
+
+  // progress + nav
+  var prog = document.querySelector('.scroll-progress'), nav = document.getElementById('nav');
+  function onScroll(){ var h=document.documentElement, max=h.scrollHeight-h.clientHeight; prog.style.width = (max>0? (h.scrollTop/max)*100:0)+'%'; nav.classList.toggle('is-scrolled', h.scrollTop>40); }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // filters
+  var btns = document.querySelectorAll('.filter-btn'), cards = document.querySelectorAll('.project');
+  btns.forEach(function(b){ b.addEventListener('click', function(){
+    btns.forEach(function(x){ x.classList.remove('is-active'); }); b.classList.add('is-active');
+    var f = b.dataset.filter;
+    cards.forEach(function(c){ var show = f==='all' || (c.dataset.cat||'').split(' ').indexOf(f)>-1; c.classList.toggle('is-hidden', !show); c.classList.add('is-visible'); });
+  }); });
+
+  // pause other videos when one plays
+  var vids = document.querySelectorAll('video');
+  vids.forEach(function(v){ v.addEventListener('play', function(){ vids.forEach(function(o){ if (o!==v) o.pause(); }); }); });
+
+  // cursor
+  if (!isTouch && !isStatic) {
+    var c = document.querySelector('.cursor'), d = document.querySelector('.cursor-dot'), mx=0,my=0,cx=0,cy=0;
+    addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; d.style.transform='translate('+mx+'px,'+my+'px) translate(-50%,-50%)'; });
+    (function loop(){ cx+=(mx-cx)*.18; cy+=(my-cy)*.18; c.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a,button').forEach(function(el){ el.addEventListener('mouseenter', function(){ c.classList.add('is-hover'); }); el.addEventListener('mouseleave', function(){ c.classList.remove('is-hover'); }); });
+  }
+})();
+</script>
+</body>
 </html>
