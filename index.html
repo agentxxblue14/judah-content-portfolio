@@ -117,6 +117,11 @@
   .reel-card__info p{font-size:14px;line-height:1.65;color:rgba(255,255,255,.7)}
   .reel-card__meta{margin-top:auto;padding-top:12px;font-size:11.5px;font-weight:700;
         letter-spacing:.09em;text-transform:uppercase;color:var(--gold-light)}
+  .reels__client{margin-top:64px;max-width:720px}
+  .reels__client--gap{margin-top:84px}
+  .reels__client h3{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;letter-spacing:-.025em;color:var(--gold-light)}
+  .reels__client p{margin-top:10px;font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.66)}
+  .reels__client + .reels__grid{margin-top:34px}
   .reels__note{margin-top:52px;font-size:14px;color:rgba(255,255,255,.5);max-width:820px;line-height:1.7}
 
   /* sections */
@@ -710,8 +715,13 @@
 <section id="reels" class="reels">
   <div class="container">
     <span class="eyebrow eyebrow--light" data-reveal>05 &middot; Short form reels</span>
-    <h2 class="section-title section-title--lg" data-reveal>Eight reels for one client,<br><span class="text-gold">shared with her permission.</span></h2>
-    <p class="lead" data-reveal>Anna DeGuzman is a magician and an AGT semi finalist. These are the vertical pieces I cut for her, from a nine second card trick to a two minute VidCon vlog. Every one is 1080x1920, captioned, and mixed to read with the sound off. Sound on if you have it.</p>
+    <h2 class="section-title section-title--lg" data-reveal>Fourteen reels, two clients,<br><span class="text-gold">shared with their permission.</span></h2>
+    <p class="lead" data-reveal>Every one of these is 1080x1920, captioned, and mixed to read with the sound off. Sound on if you have it.</p>
+
+    <div class="reels__client" data-reveal>
+      <h3>Anna DeGuzman</h3>
+      <p>Magician and AGT semi finalist. Long form television reframed for vertical, live show recaps, and a two minute vlog cut out of a ninety four file dump.</p>
+    </div>
     <div class="reels__grid">
       <div class="reel-card" data-reveal>
         <div class="reel-card__media"><span class="badge">AGT</span><video controls preload="none" playsinline poster="assets/reels/anna-agt-reveal.jpg"><source src="assets/reels/anna-agt-reveal.mp4" type="video/mp4"></video></div>
@@ -778,7 +788,62 @@
         </div>
       </div>
     </div>
-    <p class="reels__note">All eight are my own edits and are published here with Anna's permission. Work I did not cut myself is not on this page.</p>
+
+    <div class="reels__client reels__client--gap" data-reveal>
+      <h3>J Rey Soul</h3>
+      <p>Filipino American artist touring with the Black Eyed Peas. Tour footage cut into story arcs, trend formats built to her brief, and caption led edits.</p>
+    </div>
+    <div class="reels__grid">
+      <div class="reel-card" data-reveal>
+        <div class="reel-card__media"><span class="badge">Tour</span><video controls preload="none" playsinline poster="assets/reels/jrey-one-night-story.jpg"><source src="assets/reels/jrey-one-night-story.mp4" type="video/mp4"></video></div>
+        <div class="reel-card__info">
+          <h3>One night, one story</h3>
+          <p>Landing in Copenhagen, hair and makeup, the car, backstage, walking out to the crowd, then the afterglow. Every cut re timed to 114 BPM so a track drops in cleanly at upload, closing on a plain black follow card with no face on the outro.</p>
+          <div class="reel-card__meta">J Rey Soul &middot; 0:40</div>
+        </div>
+      </div>
+      <div class="reel-card" data-reveal>
+        <div class="reel-card__media"><span class="badge">Talking head</span><video controls preload="none" playsinline poster="assets/reels/jrey-misconceptions.jpg"><source src="assets/reels/jrey-misconceptions.mp4" type="video/mp4"></video></div>
+        <div class="reel-card__info">
+          <h3>Common misconceptions about touring</h3>
+          <p>Fourteen seconds of her on camera with real audio setting up the myths, then the audio stops dead and three numbered cards run over silent b roll. Silent after the hook because she asked for it that way, ready for sound at upload.</p>
+          <div class="reel-card__meta">J Rey Soul &middot; 1:23</div>
+        </div>
+      </div>
+      <div class="reel-card" data-reveal>
+        <div class="reel-card__media"><span class="badge">Trend</span><video controls preload="none" playsinline poster="assets/reels/jrey-kinda-chic.jpg"><source src="assets/reels/jrey-kinda-chic.mp4" type="video/mp4"></video></div>
+        <div class="reel-card__info">
+          <h3>Kinda chic</h3>
+          <p>Her version of a trend format she sent over. Six real moments, one caption each, and every caption describes what is actually on screen rather than anything staged or invented.</p>
+          <div class="reel-card__meta">J Rey Soul &middot; 0:26</div>
+        </div>
+      </div>
+      <div class="reel-card" data-reveal>
+        <div class="reel-card__media"><span class="badge">Trend</span><video controls preload="none" playsinline poster="assets/reels/jrey-not-dramatic.jpg"><source src="assets/reels/jrey-not-dramatic.mp4" type="video/mp4"></video></div>
+        <div class="reel-card__info">
+          <h3>Not to be dramatic but</h3>
+          <p>A trending hook cut slow on purpose. Real crossfades instead of hard cuts, every shot held longer than the format usually allows, and her native audio running continuously underneath with no music added.</p>
+          <div class="reel-card__meta">J Rey Soul &middot; 0:21</div>
+        </div>
+      </div>
+      <div class="reel-card" data-reveal>
+        <div class="reel-card__media"><span class="badge">Story</span><video controls preload="none" playsinline poster="assets/reels/jrey-roots-to-stage.jpg"><source src="assets/reels/jrey-roots-to-stage.mp4" type="video/mp4"></video></div>
+        <div class="reel-card__info">
+          <h3>Roots to the stage</h3>
+          <p>Six archive clips recut into one arc: growing up adopted in the Philippines, joining an iconic group, Stade de France with David Guetta, a Filipino pride award, then singing the national anthem.</p>
+          <div class="reel-card__meta">J Rey Soul &middot; 1:35</div>
+        </div>
+      </div>
+      <div class="reel-card" data-reveal>
+        <div class="reel-card__media"><span class="badge">Captions</span><video controls preload="none" playsinline poster="assets/reels/jrey-filipino-food.jpg"><source src="assets/reels/jrey-filipino-food.mp4" type="video/mp4"></video></div>
+        <div class="reel-card__info">
+          <h3>Favorite Filipino food</h3>
+          <p>Pop in captions with gold keyword highlights and matching graphics timed to land on individual words. The caption style is the edit here, not decoration on top of it.</p>
+          <div class="reel-card__meta">J Rey Soul &middot; 0:43</div>
+        </div>
+      </div>
+    </div>
+    <p class="reels__note">All fourteen are my own edits, published here with each client's permission.</p>
   </div>
 </section>
 
